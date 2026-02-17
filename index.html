@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Task Tracker</h1>
+      <p class="sub">Add tasks, complete them, and keep them saved.</p>
+    </header>
+
+    <section class="add">
+      <input id="taskInput" type="text" placeholder="Add a task..." maxlength="80" />
+      <button id="addBtn" type="button">Add</button>
+    </section>
+
+    <section class="controls">
+      <div class="filters" role="tablist" aria-label="Task filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="active" type="button">Active</button>
+        <button class="filter" data-filter="done" type="button">Done</button>
+      </div>
+
+      <button id="clearDoneBtn" class="secondary" type="button">Clear Done</button>
+    </section>
+
+    <section class="list">
+      <ul id="taskList" aria-label="Task list"></ul>
+      <p id="emptyState" class="empty">No tasks yet. Add one above 👆</p>
+    </section>
+
+    <footer class="footer">
+      <span id="countLabel">0 tasks</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
